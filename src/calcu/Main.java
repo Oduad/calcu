@@ -223,24 +223,19 @@ public class Main {
 
 		do {
 			optionPoligon = Integer
-					.parseInt(JOptionPane.showInputDialog("POLIGONS. \n1. Poligons with 3\n" + "2. Poligons with 4 sides\n"
+					.parseInt(JOptionPane.showInputDialog("POLIGONS. \n1. Poligons with 3 sides\n" + "2. Poligons with 4 sides\n"
 							+ "3. Poligons with more sides\n" + "4. Exit\n" + "Enter the number of sides: "));
 
 			switch (optionPoligon) {
 			case 1:
-				side1 = Double.parseDouble(JOptionPane.showInputDialog("Enter the side 2: "));
-				side2 = Double.parseDouble(JOptionPane.showInputDialog("Enter the side 2: "));
-				if (side1==side2) {
-					
-				}else {
-					
-				}
+				triangles();
 				break;
 			case 2:
 
 				break;
 			case 3:
-				
+				numberOfSides = Integer.parseInt(JOptionPane.showInputDialog("Enter the number of sides:"));
+				apothem = Double.parseDouble(JOptionPane.showInputDialog("Enter the apothem:"));
 				break;
 			case 4:
 				break;
@@ -517,4 +512,34 @@ public class Main {
 	public static double getReal(double real) {
 		return real;
 	}
+	
+	public static void triangles() {
+		double side1,side2, side3;
+		int optionTriangle;
+
+		do {
+			optionTriangle = Integer
+					.parseInt(JOptionPane.showInputDialog("TRIANGLES. \n1. Equilateral triangle\n" + "2. Isosceles triangle\n"
+							+ "3. scalene triangle\n" + "4. Exit\n" + "Enter the number of sides: "));
+
+			switch (optionTriangle) {
+			case 1:
+				side1 = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the first side: "));
+				break;
+			case 2:
+
+				break;
+			case 3:
+				
+				break;
+			case 4:
+				break;
+			default:
+				JOptionPane.showMessageDialog(null, "This option does not exist.\n");
+				break;
+			}
+
+		} while (optionTriangle != 3);
+	}
+
 }
