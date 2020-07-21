@@ -1,0 +1,6 @@
+# Archivos a excluir del versionado.
+ 
+.settings/
+.classpath
+.project
+bin/
