@@ -217,7 +217,7 @@ public class Main {
 	}
 
 	public static void poligons() {
-		double side1,side2, apothem;
+		double side1,side2, apothem, side;
 		int numberOfSides;
 		int optionPoligon;
 
@@ -234,8 +234,11 @@ public class Main {
 
 				break;
 			case 3:
-				numberOfSides = Integer.parseInt(JOptionPane.showInputDialog("Enter the number of sides:"));
-				apothem = Double.parseDouble(JOptionPane.showInputDialog("Enter the apothem:"));
+				numberOfSides = Integer.parseInt(JOptionPane.showInputDialog("Enter the number of sides: "));
+				side = Double.parseDouble(JOptionPane.showInputDialog("Enter the value of the side: "));
+				apothem = Double.parseDouble(JOptionPane.showInputDialog("Enter the apothem: "));
+				PoligonNSides poligon = new PoligonNSides(numberOfSides, side, apothem);
+				JOptionPane.showMessageDialog(null, "This area is "+poligon.calculateArea(numberOfSides, side, apothem));
 				break;
 			case 4:
 				break;
@@ -346,7 +349,7 @@ public class Main {
 		do {
 			matrixOption = Integer.parseInt(JOptionPane.showInputDialog(
 					"MATRICES\n1. Addition" + "\n2. Subtraction" + "\n3. Multiplication" + "\n4. Comparison"
-							+ "\n5. Inverse" + "\n7. Exit" + "\nEnter the operation you want work with: "));
+							+ "\n5. Inverse" + "\n6. Exit" + "\nEnter the operation you want work with: "));
 			switch (matrixOption) {
 			case 1:
 
@@ -361,13 +364,13 @@ public class Main {
 				break;
 			case 5:
 				break;
-			case 7:
+			case 6:
 				break;
 			default:
 				JOptionPane.showMessageDialog(null, "This option does not exist");
 				break;
 			}
-		} while (matrixOption != 5);
+		} while (matrixOption != 6);
 		rows1 = Integer.parseInt(JOptionPane.showInputDialog("Enter the number of rows of the first matrix: "));
 		columns1 = Integer.parseInt(JOptionPane.showInputDialog("Enter the number of columns of the first matrix: "));
 		Matrix matrix1 = new Matrix(rows1, columns1);
@@ -524,13 +527,16 @@ public class Main {
 
 			switch (optionTriangle) {
 			case 1:
-				side1 = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the first side: "));
+				side1 = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the value of the side: "));
 				break;
 			case 2:
-
+				side1 = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the value of the repeated side: "));
+				side2 = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the value of the other side: "));
 				break;
 			case 3:
-				
+				side1 = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the value of the first side: "));
+				side2 = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the value of the second side: "));
+				side3 = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the value of the third side: "));
 				break;
 			case 4:
 				break;
