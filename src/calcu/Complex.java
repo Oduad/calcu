@@ -1,7 +1,5 @@
 package calcu;
 
-import javax.swing.JOptionPane;
-
 public class Complex {
 	double real;
 	double img;
